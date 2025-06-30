@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/proceedpage"
+    android:background="#FFFFFF">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_placemyorder"
+        android:paddingBottom="100dp"
+        tools:ignore="UnknownId">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/red"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Name Section -->
+            <LinearLayout
+                android:id="@+id/profilename"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:background="@drawable/accountcardbg"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:backgroundTint="#E3D6D6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="text"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/profileaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/accountcardbg"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:backgroundTint="#E3D6D6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="textMultiLine"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profileemail"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:background="@drawable/accountcardbg"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:backgroundTint="#E3D6D6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profilephone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:background="@drawable/accountcardbg"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:backgroundTint="#E3D6D6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="phone"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="phone"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profilepassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:background="@drawable/accountcardbg"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:backgroundTint="#E3D6D6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:paddingLeft="8dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="text"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Bottom Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/buttonred"
+        android:text="Save Information"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+</RelativeLayout>

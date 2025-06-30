@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <!-- Customer Name -->
+            <TextView
+                android:id="@+id/customerNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Name"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <!-- Payment Label -->
+            <TextView
+                android:id="@+id/paymentLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment:"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/customerNameTextView"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Payment Status -->
+            <TextView
+                android:id="@+id/paymentStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Received"
+                android:textSize="16sp"
+                android:textColor="#FB0000"
+                android:layout_toEndOf="@id/paymentLabel"
+                android:layout_alignBaseline="@id/paymentLabel"
+                android:layout_marginStart="4dp"/>
+
+            <!-- Delivery Section -->
+            <LinearLayout
+                android:id="@+id/statusSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivered"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/statusCardView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="2dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
